@@ -50,11 +50,6 @@ class Emacs < Formula
     depends_on "fontconfig" => :recommended
   end
 
-  fails_with :llvm do
-    build 2334
-    cause "Duplicate symbol errors while linking."
-  end
-
   def install
     args = ["--prefix=#{prefix}",
             "--enable-locallisppath=#{HOMEBREW_PREFIX}/share/emacs/site-lisp",

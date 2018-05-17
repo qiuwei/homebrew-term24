@@ -27,8 +27,8 @@ class Vim < Formula
     option "without-#{language}", "Build vim without #{language} support"
   end
 
-  depends_on :python => :recommended
-  depends_on :python3 => :optional
+  depends_on "python@2" => :recommended
+  depends_on "python@3" => :optional
   depends_on "lua" => :optional
   depends_on "luajit" => :optional
   depends_on "gtk+" if build.with? "client-server"
